@@ -1,0 +1,257 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+@import url('https://fonts.google.com/specimen/Inter');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}   
+
+/* NAVBAR */
+
+.header {
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+/* MAIN ARTICLE */
+
+.wholeArticle { 
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.mainArticle {
+    /* border: red solid 2px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 45rem;
+    height: 100%;
+    gap: 1rem;
+}
+
+.desktopWallpaper {
+    max-width: 100%;
+}
+
+.mobileWallpaper {
+    display: none;
+}
+
+.articleTitle {
+    width: 20rem;
+    font-size: 30px;
+}
+
+.articleDescription p{
+    width: 100%;
+    font-size: 16px;
+}
+
+.articleDescription {
+    width: 50%;
+    font-size: 16px;
+}
+
+.articleButton {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 2.5rem;
+    font-weight: bold;
+    background: hsl(5, 85%, 63%);
+    transition: 0.3s ease;
+}
+
+.articleButton:hover {
+    color: hsl(36, 100%, 99%);
+    background: hsl(240, 100%, 5%);
+}
+
+/* SIDE ARTICLES */
+
+.sideArticles {
+    width: 20rem;
+    height: 32rem;
+    background: rgb(28, 32, 55);
+    padding: 20px 20px;
+    display: flex; /* Add this */
+    flex-direction: column; /* Add this */
+    gap: 1rem;
+}
+
+.sideArticles h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+}
+
+
+.lineSeparator {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgb(102, 99, 102);
+}
+
+.sideCards h2 {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0px 0px 20px 0px;
+    transition: 0.3s ease;
+}
+
+.sideCards h2:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.sideCards p {
+    font-size: 15px;
+}
+
+.sideCards p, h2 {
+    color: rgb(240, 240, 240);
+}
+
+/* LOWER ARTICLES */
+
+.lowerArticles {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.lowerImg {
+    object-fit: contain;
+}
+
+.lowerCards {
+    display: flex;
+    gap: 1rem;
+    height: 8rem;
+    width: 20rem;
+}
+
+.lowerCards h1 {
+    color: hsl(5, 85%, 63%);
+}
+
+.lowerCards h3 {
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.lowerCards h3:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.lowerCards p {
+    font-size: 13px;
+}
+
+/* BOTTOM */
+.attribution {
+    align-items: center;
+    position: relative;
+    user-select: none;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+@media screen and (max-width: 720px) {
+    .wholeArticle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainArticle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24rem;
+    }
+
+    .articleDescription {
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .desktopWallpaper {
+        display: none;
+    }
+
+    .mobileWallpaper {
+        display: block;
+        width: 22rem;
+    }
+
+    .articleTitle {
+        width: 20rem;
+    }
+
+    /* SIDE ARTICLE */
+
+    .sideArticles {
+        width: 22rem;
+    }
+    
+    
+
+    /* LOWER ARTICLE */
+
+    .lowerArticles {
+        gap: 1rem;
+    }
+
+    .lowerCards {
+        width: 22rem;
+    }
+}
