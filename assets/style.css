@@ -5,7 +5,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }   
 
@@ -22,6 +22,17 @@
     z-index: 9999;
 }
 
+.navIcons {
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    right: 0;
+    margin-left: auto;
+}
+
+#check {
+    display: none;
+}
 
 .navbar {
     position: relative;
@@ -74,18 +85,14 @@
     display: none;
 }
 
-.articleTitle {
+.articleTitle h1{
     width: 20rem;
-    font-size: 30px;
-}
-
-.articleDescription p{
-    width: 100%;
-    font-size: 16px;
+    font-size: 50px;
+    font-weight: 800;
 }
 
 .articleDescription {
-    width: 50%;
+    width: 47%;
     font-size: 16px;
 }
 
@@ -112,13 +119,13 @@
 /* SIDE ARTICLES */
 
 .sideArticles {
-    width: 20rem;
+    width: 20rem;   
     height: 32rem;
-    background: rgb(28, 32, 55);
+    background: hsl(240, 100%, 5%);
     padding: 20px 20px;
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this */
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .sideArticles h1 {
@@ -174,21 +181,27 @@
     width: 20rem;
 }
 
-.lowerCards h1 {
+.lowerCardDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lowerCardDetails h1 {
     color: hsl(5, 85%, 63%);
 }
 
-.lowerCards h3 {
-    font-size: 15px;
+.lowerCardDetails h3 {
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.lowerCards h3:hover {
+.lowerCardDetails h3:hover {
     color: hsl(5, 85%, 63%);
 }
 
-.lowerCards p {
+.lowerCardDetails p {
     font-size: 13px;
 }
 
@@ -196,14 +209,95 @@
 .attribution {
     align-items: center;
     position: relative;
+    display: block;
     user-select: none;
+    text-align: center;
+    margin-top: 50px;
     padding: 10px;
     bottom: 0;
     width: 100%;
     height: 40px;
+    font-size: 11px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
 
 @media screen and (max-width: 720px) {
+
+    /* NAVBAR */
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .navIcons {
+        display: inline-flex;
+        margin-right: 30px;
+    }
+
+    #check:checked ~ .navIcons #menu-icon {
+        display: none;
+    }
+
+    .navIcons #close-icon {
+        display: none;
+    }
+
+    #check:checked ~ .navIcons #close-icon {
+        display: block;
+        z-index: 9999;
+    }
+
+    .navbar {
+        box-shadow: 0 2px 4px rgba(36, 36, 36, 0.3);
+        padding-right: 10px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background: white;
+        overflow: hidden;
+        transition: .3s ease;
+        opacity: 0;
+    }   
+
+
+    #check:checked ~ .navbar {
+        width: 20rem;
+        opacity: 1;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }   
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        display: block;
+        text-align: left;
+        margin: 0.5rem 2rem;
+        transform: translateX(500px);
+        transition: 0.3s ease;
+    }
+
+    #check:checked ~ .navbar a{
+        transform: translateX(0);
+        transition-delay: calc(0.20s * var(--i));
+    }
+
+    /* MAIN ARTICLES */
+
     .wholeArticle {
         display: flex;
         align-items: center;
@@ -214,13 +308,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 24rem;
+        width: 22rem;
     }
 
     .articleDescription {
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
         font-size: 16px;
     }
 
@@ -230,11 +324,11 @@
 
     .mobileWallpaper {
         display: block;
-        width: 22rem;
+        width: 100%;
     }
 
     .articleTitle {
-        width: 20rem;
+        width: 100%;
     }
 
     /* SIDE ARTICLE */
@@ -253,5 +347,99 @@
 
     .lowerCards {
         width: 22rem;
+    }
+}
+
+@media screen and (max-width:375px){
+
+    /* NAVBAR */
+
+    .navbar {
+        box-shadow: 0 2px 4px rgba(36, 36, 36, 0.3);
+        padding-right: 10px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background: white;
+        overflow: hidden;
+        transition: .3s ease;
+        opacity: 0;
+    }   
+
+
+    #check:checked ~ .navbar {
+        width: 18rem;
+        opacity: 1;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }   
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        display: block;
+        text-align: left;
+        margin: 0.5rem 2rem;
+        transform: translateX(500px);
+        transition: 0.3s ease;
+    }
+
+    #check:checked ~ .navbar a{
+        transform: translateX(0);
+        transition-delay: calc(0.20s * var(--i));
+    }
+
+    /* MAIN ARTICLES */
+
+    .mainArticle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18rem;
+    }
+
+    .mobileWallpaper {
+        width: 18rem;
+    }
+
+    .articleTitle {
+        width: 100%;
+    }
+
+    .articleDescription {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 15px;
+    }
+
+
+    /* SIDE ARTICLE */
+
+    .sideArticles {
+        width: 18rem;
+    }
+    
+    
+
+    /* LOWER ARTICLE */
+
+    .lowerArticles {
+        gap: 1rem;
+    }
+
+    .lowerCards {
+        width: 18rem;
     }
 }

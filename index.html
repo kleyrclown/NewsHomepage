@@ -8,22 +8,22 @@
   
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <header class="header">
     <img src="assets/images/logo.svg" class="logo">
+    <input type="checkbox" id="check">
+    <label for="check" class="navIcons">
+      <img src="assets/images/icon-menu.svg" alt="" id="menu-icon">
+      <img src="assets/images/icon-menu-close.svg" alt="" id="close-icon">
+    </label>
     <nav class="navbar">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li>
+        <li><a href="#" style="--i:0;">Home</a></li>
+        <li><a href="#" style="--i:1;">New</a></li>
+        <li><a href="#" style="--i:2;">Popular</a></li>
+        <li><a href="#" style="--i:3;">Trending</a></li>
+        <li><a href="#" style="--i:4;">Categories</a></li>
       </ul>
     </nav>
   </header>
@@ -65,7 +65,7 @@
     <div class="lowerArticles">
       <div class="lowerCards">
         <img src="assets/images/image-retro-pcs.jpg" class="lowerImg">
-        <div>
+        <div class="lowerCardDetails">
           <h1>01</h1>
           <h3>Reviving Retro PCs</h3>
           <p>What happens when old PCs are given modern upgrades?</p>
@@ -73,7 +73,7 @@
       </div>
       <div class="lowerCards">
         <img src="assets/images/image-top-laptops.jpg" class="lowerImg">
-        <div>
+        <div class="lowerCardDetails">
           <h1>02</h1>
           <h3>Top 10 Laptops of 2022</h3>
           <p>Our best picks for various needs and budgets.</p>
@@ -81,7 +81,7 @@
       </div>
       <div class="lowerCards">
         <img src="assets/images/image-gaming-growth.jpg" class="lowerImg">
-        <div>
+        <div class="lowerCardDetails">
           <h1>03</h1>
           <h3>The Growth of Gaming</h3>
           <p>How the pandemic has sparked fresh opportunities.</p>
@@ -90,7 +90,7 @@
     </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Chan Klear Baylon</a>.
+    Coded by <a href="https://kleyrclown.github.io/MyPortfolio/" target="_blank">Chan Klear Baylon</a>.
   </div>
 </body>
 </html>
