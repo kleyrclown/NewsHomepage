@@ -10,17 +10,18 @@
 
 </head>
 <body>
-  <header class="header">
+  <header class="header headerSticky">
     <img src="assets/images/logo.svg" class="logo">
     <input type="checkbox" id="check">
     <label for="check" class="navIcons">
       <img src="assets/images/icon-menu.svg" alt="" id="menu-icon">
       <img src="assets/images/icon-menu-close.svg" alt="" id="close-icon">
     </label>
+    <div class="overlay"></div>
     <nav class="navbar">
       <ul>
-        <li><a href="#" style="--i:0;">Home</a></li>
-        <li><a href="#" style="--i:1;">New</a></li>
+        <li><a href="#home" style="--i:0;">Home</a></li>
+        <li><a href="#new" style="--i:1;">New</a></li>
         <li><a href="#" style="--i:2;">Popular</a></li>
         <li><a href="#" style="--i:3;">Trending</a></li>
         <li><a href="#" style="--i:4;">Categories</a></li>
@@ -28,7 +29,7 @@
     </nav>
   </header>
     <section class="wholeArticle">
-      <div class="mainArticle">
+      <div class="mainArticle" id="home">
         <div class="articleWallpaper">
           <img src="assets/images/image-web-3-desktop.jpg" class="desktopWallpaper">
           <img src="assets/images/image-web-3-mobile.jpg" class="mobileWallpaper">
@@ -44,7 +45,7 @@
             <a href="#" class="articleButton">READ MORE</a>
           </div>
       </div>
-      <div class="sideArticles">
+      <div class="sideArticles" id="new">
         <h1>New</h1>
         <div class="sideCards"> 
           <h2>Hydrogen VS Electric Cars</h2>
@@ -92,5 +93,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://kleyrclown.github.io/MyPortfolio/" target="_blank">Chan Klear Baylon</a>.
   </div>
+  <script src="assets/script.js"></script>
 </body>
 </html>
